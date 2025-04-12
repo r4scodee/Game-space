@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Space</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
+    <header data-aos="fade-down">
         <div class="logo">
             <img src="logo-web.png" alt="logo">
         </div>
@@ -23,18 +24,18 @@
         </nav>
     </header>
 
-    <div class="hero" id="home">
+    <div class="hero" id="home" data-aos="fade-zoom-in" data-aos-duration="2000">
         <div class="overlay">
         </div>
         <div class="content">
-            <h1 class="title">
+            <h1 class="title" data-aos="fade-right" data-aos-delay="600">
                 RPL<br>Studio
             </h1>
-            <h2>Your one-stop<br>video game<br>center</h2>
+            <h2 data-aos="fade-left" data-aos-delay="600">Your one-stop<br>video game<br>center</h2>
         </div>
     </div>
 
-    <section class="hero-section" id="about">
+    <section class="hero-section" id="about" data-aos="fade-zoom-in">
         <h1>Mini <span>Games</span></h1>
         <p>Suka tantangan singkat yang seru? Mini games mungkin pilihan yang tepat buat kamu! Dapatkan berbagai mini
             games
@@ -42,7 +43,7 @@
         <a href="#" class="collection-link">OUR GAME COLLECTION<br>↓</a>
     </section>
 
-    <section class="strategy-section" id="game">
+    <section class="strategy-section" id="game" data-aos="fade-zoom-in">
         <div class="strategy-content">
             <img src="tictactoe.png" alt="Games">
             <div class="strategy-text">
@@ -61,7 +62,7 @@
         </div>
     </section>
 
-    <section class="reviews-section" id="review">
+    <section class="reviews-section" id="review" data-aos="fade-zoom-in">
         <div class="reviews-title">Game <span>Reviews</span></div>
         <div class="reviews-container">
             <div class="review-card">
@@ -90,7 +91,7 @@
         </div>
     </section>
 
-    <section class="contact-section" id="kontak">
+    <section class="contact-section" id="kontak" data-aos="fade-zoom-in">
         <div class="container-contact">
             <h1>Kontak Kami</h1>
 
@@ -132,7 +133,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer data-aos="fade-zoom-in">
         <div class="footer-container">
             <div class="footer-content">
                 <h3>Contact Us</h3>
@@ -168,6 +169,16 @@
             </p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                duration: 2000,
+                delay: 100
+            }
+        );
+    </script>
 </body>
 
 </html>
