@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Orbitron:wght@400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: "Orbitron", sans-serif;
+  background-color: #1a1a1a;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #00000021;
+  backdrop-filter: blur(3.5px);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+  box-shadow: 0 0 10px #00000080;
+}
+
+.logo img {
+  width: 120px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: aqua;
+  text-shadow: 0 0 8px aqua;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: aqua;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("background-hero.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e0e0e0;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  color: #c5d8ff;
+  margin-bottom: 20px;
+}
+
+.hero .content h2 {
+  font-size: 64px;
+  font-family: "Orbitron", sans-serif;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  color: #fff;
+}
+
+.hero-section h1 span {
+  color: aqua;
+}
+
+.hero-section p {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 18px;
+  color: #fff;
+}
+
+.collection-link {
+  display: inline-block;
+  margin-top: 40px;
+  font-weight: bold;
+  color: aqua;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Strategy Section */
+.strategy-section {
+  padding: 60px 20px;
+}
+
+.strategy-content {
+  height: 72vh;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.strategy-content img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.strategy-text {
+  width: 600px;
+}
+
+.strategy-text h2 {
+  color: aqua;
+  font-size: 36px;
+}
+
+.strategy-text p {
+  font-size: 18px;
+  margin: 30px 0;
+  color: #fff;
+}
+
+.see-more {
+  background-color: aqua;
+  color: #1a1a1a;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.see-more:hover {
+  background: #06ada7;
+}
+
+.contact-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-contact {
+  padding: 40px;
+  width: 600px;
+}
+
+.container-contact h1 {
+  color: aqua;
+  text-align: center;
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.contact-item {
+justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.contact-text h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+} 
+
+.contact-text p {
+  margin: 5px 0 0;
+  color: #9d9d9d;
+}
+
+.sosial-item {
+  margin-bottom: 20px;
+  height: 45vh;
+}
+
+.sosial-item h1 {
+  color: aqua;
+  text-align: center;
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.social-media {
+  text-align: center;
+  margin-top: 30px;
+}
+.social-media i {
+  margin: 0 15px;
+  font-size: 34px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .strategy-content,
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .strategy-text,
+  .contact-info {
+    max-width: 100%;
+  }
+}
+
+.reviews-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.reviews-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.reviews-title span {
+  color: aqua;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.review-card {
+  max-width: 300px;
+  text-align: left;
+}
+
+.game-name {
+  font-weight: bold;
+  color: aqua;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.review-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.reviewer {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+footer {
+  background: #333333;
+  padding-top: 50px;
+  color: #fff;
+}
+.footer-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.footer-content {
+  width: 33.3%;
+}
+h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.footer-content p {
+  width: 190px;
+  margin: auto;
+  padding: 7px;
+}
+.footer-content ul {
+  text-align: center;
+}
+.list {
+  padding: 0;
+}
+.list li {
+  width: auto;
+  text-align: center;
+  list-style-type: none;
+  padding: 7px;
+  position: relative;
+}
+.list li::before {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background: aqua;
+  transition-duration: 0.5s;
+}
+.list li:hover::before {
+  width: 70px;
+}
+.social-icons {
+  text-align: center;
+  padding: 0;
+}
+.social-icons li {
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+  list-style-type: none;
+}
+.social-icons i {
+  color: #fff;
+  font-size: 40px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: aqua;
+  text-shadow: 0 0 8px aqua;
+}
+.social-icons i:hover {
+  color: aqua;
+  text-shadow: 0 0 8px aqua;
+}
+.bottom-bar {
+  background: #333333;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+.bottom-bar p {
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+  padding: 7px;
+}
