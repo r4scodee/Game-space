@@ -65,6 +65,7 @@ nav a:hover::after {
   width: 100%;
 }
 
+
 .hero {
   position: relative;
   width: 100%;
@@ -200,11 +201,24 @@ nav a:hover::after {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container-form{
+    width: 400px;
+  }
 }
 
 .container-contact {
   padding: 40px;
   width: 600px;
+  margin: auto;
 }
 
 .container-contact h1 {
@@ -219,6 +233,7 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   margin-top: 20px;
+  
 }
 
 .contact-text h3 {
@@ -233,28 +248,63 @@ nav a:hover::after {
   color: #9d9d9d;
 }
 
-.sosial-item {
-  margin-bottom: 20px;
-  height: 45vh;
+.container-form {
+  padding: 40px;
+  width: 600px;
+  margin: auto;
+  background: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 0 10px aqua;
 }
 
-.sosial-item h1 {
+.container-form h1 {
   color: aqua;
   text-align: center;
   font-size: 48px;
   margin: 10px 0;
 }
 
-.social-media {
-  text-align: center;
-  margin-top: 30px;
+.form-item {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
-.social-media i {
-  margin: 0 15px;
-  font-size: 34px;
+
+.form-item input,
+.form-item textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 15px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+}
+
+.form-item input::placeholder,
+.form-item textarea::placeholder {
+  color: #ccc;
+}
+
+.form-item button {
+  padding: 12px 30px;
+  background-color: aqua;
+  border: none;
+  border-radius: 6px;
+  color: #343434;
+  font-weight: bold;
   cursor: pointer;
-  color: #fff;
+  transition: background 0.3s ease;
 }
+
+.form-item button:hover {
+  background-color: #00ffffb0;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
